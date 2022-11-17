@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>Restaurants</h1>
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+          <div class="card">
+            <%= restaurant.name %>
+            <%= content_tag(:span, "Category: #{restaurant.category}", class: "category")  %>
+            <%= link_to 'Details', restaurant %>
+          </div>
+    <% end %>
+  </div>
